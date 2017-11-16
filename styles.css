@@ -70,8 +70,10 @@ nav li a:hover {
 
 main h2 {
   display: inline-block;
+  margin-top: 15px;
   background: #FFB476;
-  border-left: 3px solid #E89E60;
+  color: #333;
+  border-left: 6px solid #E89E60;
   padding: 20px 30px;
 }
 
