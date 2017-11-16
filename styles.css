@@ -68,6 +68,13 @@ nav li a:hover {
   color: #3498db;
 }
 
+main h2 {
+  display: inline-block;
+  background: FFB476;
+  border-left: 3px solid #E89E60;
+  padding: 0 20px;
+}
+
 main p {
   text-align: left;
   line-height: 1.3;
