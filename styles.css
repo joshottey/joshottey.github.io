@@ -70,9 +70,13 @@ nav li a:hover {
 
 main h2 {
   display: inline-block;
-  background: FFB476;
+  background: #FFB476;
   border-left: 3px solid #E89E60;
-  padding: 0 20px;
+  padding: 20px 30px;
+}
+
+main i {
+  color: #E89E60;
 }
 
 main p {
