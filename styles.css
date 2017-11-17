@@ -92,7 +92,7 @@ footer {
 
 footer li {
   display: inline;
-  padding-left: 20px;
+  padding: 0 10px;
 }
 
 footer i {
