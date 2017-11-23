@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans:300,600');
 
-* {
-  font-family: "Open Sans Condensed", sans-serif;
-  color: #333;
-  box-sizing: border-box;
-}
+* { box-sizing: border-box;}
 
 body {
   margin: 0;
+  padding: 0;
   font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  color: #333;
 }
 
 a {
@@ -16,14 +15,18 @@ a {
   cursor: pointer;
 }
 
-.container {
+#container {
   margin: 0 auto;
-  width: 60%;
+  position: relative;
+  max-width: 1000px;
   text-align: center;
 }
 
+/* Header */
+
 header {
   margin: 0;
+  position: relative;
   padding: 15px 0;
   background: #3498db;
 }
@@ -31,7 +34,7 @@ header {
 header h1, h2 {
   font-weight: lighter;
   color: #eee;
-  margin: 0 auto;
+  margin: 0;
 }
 
 header h1 {
@@ -46,28 +49,61 @@ header h2 {
   letter-spacing: 0.05em;
 }
 
+/* Navigation */
+
 nav {
-  margin: 0;
-  background: #6BB4E4;
-  display: inline-block;
   width: 100%;
+  background: #6BB4E4;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-nav li {
-  display: inline;
-}
-
-nav li a {
+nav a {
+  padding: 0 20px;
   color: #eee;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding-right: 20px;
+  transition: color .3s;
 }
 
-nav li a:hover {
+nav a:hover {
   color: #3498db;
 }
 
+/* Main content */
+
+main {
+  max-width: 800px;
+  text-align: left;
+  padding: 0 5px;
+}
+
+.post {
+  padding: 2em 0;
+}
+
+.post-date, .post-title {
+  display: inline;
+}
+
+.post-date {
+  color: #3498db;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.post-title {
+  font-size: 1.5em;
+}
+
+.post-content {
+  line-height: 1.3;
+}
+
+/*
 main h2 {
   display: inline-block;
   margin-top: 15px;
@@ -80,27 +116,37 @@ main h2 {
 main i {
   color: #E89E60;
 }
+*/
 
-main p {
-  text-align: left;
-  line-height: 1.3;
-}
+/* Footer */
 
 footer {
   border-top: 3px solid #3498db;
 }
 
-footer li {
-  display: inline;
-  padding-left: 20px;
+footer a {
+  padding: 10px;
+}
+
+#icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 footer i {
   color: #6BB4E4;
+  transition: color 0.3s;
+}
+
+footer i:hover {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 footer p {
-  font-size: .9em
+  margin: 0;
+  font-size: .85em;
   color: #333;
 }
 
