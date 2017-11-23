@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans:300,600');
 
+<<<<<<< HEAD
 * { box-sizing: border-box;}
+=======
+html {
+  box-sizing: border-box;
+}
+>>>>>>> 347d1ff12749a28a345123110d9fdae30c451203
 
 body {
   margin: 0;
@@ -52,6 +58,13 @@ header h2 {
 /* Navigation */
 
 nav {
+<<<<<<< HEAD
+=======
+  background: #6BB4E4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+>>>>>>> 347d1ff12749a28a345123110d9fdae30c451203
   width: 100%;
   background: #6BB4E4;
   min-height: 2.5em;
@@ -124,6 +137,7 @@ footer {
   border-top: 3px solid #3498db;
 }
 
+<<<<<<< HEAD
 footer a {
   padding: 10px;
 }
@@ -133,6 +147,11 @@ footer a {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+=======
+footer li {
+  display: inline;
+  padding: 0 10px;
+>>>>>>> 347d1ff12749a28a345123110d9fdae30c451203
 }
 
 footer i {
@@ -145,8 +164,13 @@ footer i:hover {
 }
 
 footer p {
+<<<<<<< HEAD
   margin: 0;
   font-size: .85em;
+=======
+  margin: 10px auto;
+  font-size: .9em;
+>>>>>>> 347d1ff12749a28a345123110d9fdae30c451203
   color: #333;
 }
 
