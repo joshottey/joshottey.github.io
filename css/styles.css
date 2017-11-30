@@ -35,7 +35,7 @@ header {
   margin: 0;
   position: relative;
   padding: 15px 0;
-  background: #3498db;
+  background: #3C673C;
 }
 
 header h1, h2 {
@@ -59,7 +59,7 @@ header h2 {
 /* Navigation */
 
 nav {
-  background: #6BB4E4;
+  background: #4D744D;
   display: flex;
   width: 100%;
   min-height: 2.5em;
@@ -78,7 +78,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #3498db;
+  color: #3C673C;
 }
 
 /* Main content */
@@ -99,7 +99,7 @@ main {
 }
 
 .post-date {
-  color: #3498db;
+  color: #3C673C;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -116,7 +116,7 @@ main {
 /* Footer */
 
 footer {
-  border-top: 3px solid #3498db;
+  border-top: 3px solid #3C673C;
 }
 
 footer a {
@@ -148,7 +148,7 @@ footer p {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #3498db;
+    background-color: #3C673C;
     min-width: 8em;
     box-shadow: 8px 8px 8px rgba(0,0,0,0.4);
     z-index: 1;
