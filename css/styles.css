@@ -14,7 +14,7 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
-  color: #ff495c;
+  color: #EF6F6C;
   transition: color 0.3s;
   font-weight: bold;
 }
@@ -178,4 +178,24 @@ footer p {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+.attn-card {
+  margin: 0 auto;
+  margin-top: 2.25em;
+  padding: 2em;
+  width: 40%;
+  background: #7DAF9C;
+  filter: drop-shadow(0 10px 20px rgba(1,1,1,0.4));
+  color: #eee;
+}
+
+.attn-card h2 {
+  padding: 0.25em;
+  text-align: center;
+  background: #6279B8;
 }
