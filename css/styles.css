@@ -198,4 +198,15 @@ footer p {
   padding: 0.25em;
   text-align: center;
   background: #6279B8;
+
+  /* banner animation */
+  animation-name: sway;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes sway {
+  from {transform: skew(20deg);}
+  to {transform: skew(-20deg);}
 }
