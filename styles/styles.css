@@ -1,0 +1,77 @@
+:root {
+  --jumbotron-padding-y: 3rem;
+}
+
+body {
+  background-color: #333A41;
+  color: #111;
+}
+
+a, .fa-file-code {
+  color: #C97D60;
+}
+a:hover {
+  color: #C97D60;
+}
+
+.btn-primary, .btn-secondary {
+  background-color: #C97D60;
+  border-color: #C97D60;
+  filter: drop-shadow(2px 2px 4px rgba(1,1,1,0.2));
+  color: #feffea;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #A5674F;
+  border-color: #A5674F;
+  color: #feffea;
+}
+
+.text-white {
+  color: #feffea;
+}
+
+.bg-light {
+  background-color: #fff!important;
+}
+
+.text-muted {
+  color: #feffea!important;
+}
+
+.jumbotron {
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #93B48B;
+  border-radius: 0px;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: calc(var(--jumbotron-padding-y) * 2);
+    padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
