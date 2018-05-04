@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300|Lato:300');
+
 :root {
   --jumbotron-padding-y: 3rem;
 }
@@ -5,6 +7,8 @@
 body {
   background-color: #333A41;
   color: #111;
+  font-family: Lato, Arial, san-serif;
+  font-weight: 300;
 }
 
 a, .fa-file-code {
@@ -27,16 +31,18 @@ a:hover {
   color: #feffea;
 }
 
-.text-white {
-  color: #feffea;
+.text-white, .text-muted {
+  color: #fff!important;
+}
+
+.lead {
+  color: #424B54;
+
+  /* 2E2D4D, 22333B, 424B54 */
 }
 
 .bg-light {
   background-color: #fff!important;
-}
-
-.text-muted {
-  color: #feffea!important;
 }
 
 .jumbotron {
@@ -57,8 +63,8 @@ a:hover {
   margin-bottom: 0;
 }
 
-.jumbotron-heading {
-  font-weight: 300;
+.display-3 {
+  font-family: "Cormorant Garamond", serif;
 }
 
 .jumbotron .container {
