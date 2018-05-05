@@ -52,6 +52,7 @@ a:hover {
   background-color: #93B48B;
   border-radius: 0px;
 }
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: calc(var(--jumbotron-padding-y) * 2);
@@ -63,12 +64,31 @@ a:hover {
   margin-bottom: 0;
 }
 
-.display-3 {
+.jumbotron h1 {
   font-family: "Cormorant Garamond", serif;
+}
+
+.jumbotron img {
+  border-radius: 50%;
+  max-width: 256px;
+  filter: contrast(110%) saturate(80%) drop-shadow(10px 10px 10px rgba(0,0,0,0.2));
+  transition: 0.3s;
+}
+
+.jumbotron img:hover {
+  filter: contrast(110%) saturate(80%) drop-shadow(5px 5px 5px rgba(0,0,0,0.2));
+}
+
+.jumbotron p {
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .jumbotron .container {
   max-width: 40rem;
+}
+
+.ul {
+  text-decoration: underline;
 }
 
 footer {
