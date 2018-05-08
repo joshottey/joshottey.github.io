@@ -41,6 +41,10 @@ a:hover {
   /* 2E2D4D, 22333B, 424B54 */
 }
 
+.project-title {
+  font-family: helvetica, arial, sans-serif;
+}
+
 .bg-light {
   background-color: #fff!important;
 }
