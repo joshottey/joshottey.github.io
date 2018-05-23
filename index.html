@@ -8,150 +8,116 @@
 
     <title>Joshua Ottey - Front end web developer</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Custom styles for this template -->
-    <link href="styles/styles.css" rel="stylesheet">
-
+    <!-- JavaScript -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
   </head>
 
   <body>
 
     <header>
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About</h4>
-              <p class="text-white">This is a work in progress. I modified a Bootstrap theme to serve as a portfolio for my web development projects. For now, have a look at the cards below and check out my CodePen. I'm currently building a responsive portfolio site from scratch, incorporating what I've learned about CSS Grid!</p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
-                <li><a href="https://twitter.com/JOttey" target="_blank">Follow on Twitter</a></li>
-                <li><a href="https://codepen.io/joshottey/" target="_blank">View my CodePen</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <div class="head-title txt-white">
+        <h2>
+          <i class="far fa-file-code" style="color:#C97D60;"></i> Front End Web Developer
+        </h2>
+        <p>Father, fiance, photographer, learning to code everyday!</p>
       </div>
-      <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <span class="navbar-brand text-white d-flex align-items-center">
-            <strong><i class="far fa-file-code"></i> Front End Web Developer</strong>
-          </span>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
+
+      <ul class="head-links">
+        <li>
+          <a href="https://twitter.com/JOttey" target="_blank">
+            <div class="link-box">
+              <i class="fab fa-twitter"></i><br>
+              <span class="link-label">Follow on Twitter</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://codepen.io/joshottey/" target="_blank">
+            <div class="link-box">
+              <i class="fab fa-codepen"></i><br>
+              <span class="link-label">View my CodePen</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://joshuaottey.com/" target="_blank">
+            <div class="link-box">
+              <i class="fas fa-camera"></i><br>
+              <span class="link-label">My Photography</span>
+            </div>
+          </a>
+        </li>
+      </ul>
     </header>
 
-    <main role="main">
+    <main>
 
-      <section class="jumbotron text-center">
-        <div class="container">
-          <img src="assets/images/josh.jpg" alt="Josh Ottey">
-          <h1 class="display-3">Joshua Ottey</h1>
-          <p class="lead">Self-taught web developer with strong knowledge of front end technologies, and a particular affinity for JavaScript. Recent recipient of the Grow with Google Challenge Scholarship thru Udacity. Great interpersonal and collaborative skills, creative and energetic, eager to learn and contribute. Learning Vue.js, Node.js (MEAN), and CSS Grid.</p>
-          <a href="tel:+16106139397" class="btn btn-primary btn-lg my-2"><i class="fas fa-phone"></i> Call</a>
-          <a href="mailto:joshua.ottey@gmail.com" class="btn btn-secondary btn-lg my-2"><i class="far fa-envelope"></i> Email</a>
+      <!-- START OF JUMBOTRON-LIKE THING -->
+      <section class="my-title">
+        <img src="assets/images/josh.jpg" alt="Josh Ottey">
+        <h1 class="my-name">Joshua Ottey</h1>
+        <p class="intro-blurb">Self-taught web developer with strong knowledge of front end technologies, and a particular affinity for JavaScript. Recent recipient of the Grow with Google Challenge Scholarship thru Udacity. Great interpersonal and collaborative skills, creative and energetic, eager to learn and contribute. Learning Vue.js, Node.js (MEAN), and CSS Grid.</p>
+        <br>
+        <a href="tel:+16106139397" class="btn txt-white"><i class="fas fa-phone"></i> Call</a>
+        <a href="mailto:joshua.ottey@gmail.com" class="btn txt-white"><i class="far fa-envelope"></i> Email</a>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <!-- Using Vue.js -->
+      <section class="project-container">
+        <h2 class="section-head">Projects</h2>
+        <ul id="app">
+          <!-- Project card template -->
+          <li class="card" :style="proj.imgURL" v-for="proj in projects">
+            <div class="card-info txt-white" @mouseenter="show(proj)" @mouseleave="show(proj)">
+              <h3 class="proj-title">{{ proj.title }}</h3>
+              <div v-show="proj.visible">
+                <p class="proj-desc">{{ proj.desc }}</p>
+                <br>
+                <a :href="proj.projURL" target="_blank" title="Have a look!"><i class="fas fa-eye"></i></a>
+                <a :href="proj.gitURL" target="_blank" title="View on GitHub"><i class="fab fa-github-alt"></i></a>
+              </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- RESUME/EXPERIENCE SECTION  -->
+      <section class="resume-container">
+        <div class="skills">
+          <h2>Skills</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li><h3>Libraries, frameworks, etc.</h3></li>
+            <ul>
+              <li>Bootstrap</li>
+              <li>Sass</li>
+              <li>jQuery</li>
+              <li>Vue.js</li>
+              <li>Node.js (learning)</li>
+            </ul>
+          </ul>
+        </div>
+        <div class="experience">
+          <h2>Experience</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro natus, recusandae earum aut, voluptatum suscipit.</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident cupiditate mollitia repellat perspiciatis dolor perferendis tenetur. Eaque illum adipisci culpa!</p>
         </div>
       </section>
 
-      <div class="album py-5 bg-light">
-        <div class="container">
-
-          <div class="row">
-            <!-- new project -->
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="http://static.oprah.com/2016/01/201602-omag-wikfs-949x534.jpg" alt="Oprah Winfrey">
-                <div class="card-body">
-                  <p class="card-text"><strong class="project-title">Oprah Quotes</strong></p>
-                  <p class="card-text">A simple quote machine using HTML, CSS, and JavaScript/jQuery. Pulls a random quote from a JSON file of things Oprah Winfrey said.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://joshottey.github.io/OprahQuotes', '_blank')">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://github.com/joshottey/OprahQuotes')">GitHub</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- new project -->
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="assets/images/color_picker.png" alt="Simple Color Picker">
-                <div class="card-body">
-                  <p class="card-text"><strong class="project-title">Color Picker</strong></p>
-                  <p class="card-text">A color picking tool I created after listening to a podcast about hexadecimals!</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://joshottey.github.io/ColorPicker', '_blank')">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://github.com/joshottey/ColorPicker')">GitHub</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- new project -->
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="assets/images/pixel_art.png" alt="Pixel Art Maker">
-                <div class="card-body">
-                  <p class="card-text"><strong class="project-title">Pixel Art Maker</strong></p>
-                  <p class="card-text">A project for the Grow With Google Scholarship thru Udacity. Create a grid canvas and draw pixel art! I incorporated my simple color picker here as well. Looking to add additional features soon!</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://joshottey.github.io/PixelArtMaker', '_blank')">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://github.com/joshottey/ColorPicker')">GitHub</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- new project -->
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="assets/images/MilesABC.png" alt="Miles' ABCs">
-                <div class="card-body">
-                  <p class="card-text"><strong class="project-title">Miles ABCs</strong></p>
-                  <p class="card-text">An interactive alphabet game I'm creating for my son, Miles. Uses event listeners, CSS transforms, etc. I plan to add sounds and images, too!</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://joshottey.github.io/MilesABC', '_blank')">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://github.com/joshottey/MilesABC')">GitHub</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            </div>
-          </div>
-        </div>
-
     </main>
 
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>If you're reading this I hope you like what you see, and furthermore, I would love for you to hire me! If you have any questions or comments, <span class="ul">please</span> reach out. Thank you for visiting!</p>
-      </div>
+    <footer>
+      <p class="txt-white">If you're reading this I hope you like what you see, and furthermore, I would love for you to hire me! If you have any questions or comments, <span class="ul">please</span> reach out. Thank you for visiting!</p>
+      <p><a href="#">Back to top</a></p>
     </footer>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   </body>
+
+  <script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
+  <script src="js/script.js" type="text/javascript"></script>
 </html>
