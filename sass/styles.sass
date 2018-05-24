@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300|Lato:300')
 
 $fonts: "Lato", Helvetica, Arial, san-serif
+$fontSize: 16px
 $pad: 20px
 $bg-color: #333A41
 $jumbo-bg: #93B48B
@@ -8,10 +9,14 @@ $res-bg: #E6AF2E
 $txt-color: #111
 $link-color: #C97D60
 
+// @media screen and (max-width: 720px)
+//   body
+//     font-size: 50%
+
 body
   margin: 0
   font-family: $fonts
-  font-size: 18px
+  font-size: $fontSize
   background-color: $bg-color
   color: $txt-color
 
@@ -81,7 +86,7 @@ body
     p
       margin: 0 auto
       max-width: 42%
-      font-size: 1.15em
+      font-size: 115%
       border-top: 1px solid rgba(0,0,0,0.1)
       line-height: 1.5
       margin-bottom: 10px
@@ -96,6 +101,14 @@ body
       font-size: 110%
     a:hover
       filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3))
+
+    // Look into media queries more...
+    @media screen and (max-width: 768px)
+      p
+        max-width: 100%
+        font-size: 95%
+      a
+        font-size: 95%
 
   .project-container
     padding: $pad
@@ -205,3 +218,12 @@ body
       margin: 0
     p:last-child
       text-align: right
+
+  @media screen and (max-width: 768px)
+    footer
+      grid-template-columns: 1fr
+      padding: $pad
+
+      p:last-child
+        text-align: center
+        margin-top: $pad/2
