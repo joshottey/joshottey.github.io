@@ -110,6 +110,7 @@ body .project-container ul .card {
   width: 100%;
   border-radius: 15px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   background-image: url("https://www.fridakahlo.org/images/paintings/self-portrait-with-necklace-of-thorns.jpg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -140,6 +141,11 @@ body .project-container ul .card .card-info .proj-desc {
 body .project-container ul .card .card-info a {
   margin: 5px 10px;
   font-size: 45px;
+  transition: 0.5s ease;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+body .project-container ul .card .card-info a:hover {
+  color: #E6AF2E;
 }
 body .project-container ul .card .card-info:hover {
   height: 100%;
