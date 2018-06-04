@@ -4,9 +4,9 @@ $fonts: "Lato", Helvetica, Arial, san-serif
 $fontSize: 16px
 $pad: 20px
 $bg-color: #333A41
-$jumbo-bg: #93B48B
-$res-bg: #E6AF2E
-$txt-color: #111
+$jumbo-bg: #CFFFB3
+$res-bg: #36829F
+$txt-color: #333
 $link-color: #C97D60
 
 // @media screen and (max-width: 720px)
@@ -20,61 +20,56 @@ body
   background-color: $bg-color
   color: $txt-color
 
-  h1, h2, h3
+h1, h2, h3
+  margin: 0
+
+a
+  color: $link-color
+  text-decoration: none
+
+.txt-white
+  color: #fff
+
+.section-head
+  margin: 0 0 10px 0
+  width: 100%
+  font-size: 300%
+  text-align: center
+  font-weight: lighter
+
+// header and nav
+header
+  padding: 10px $pad*3
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-around
+  h2
+    font-weight: 300
+  p
     margin: 0
+  ul
+    list-style-type: none
+    li
+      display: inline-block
+      margin-left: 1em
+      .link-box
+        text-align: center
+        font-size: 36px
+        .link-label
+          font-size: 16px
 
-  a
-    color: $link-color
-    text-decoration: none
-
-  .txt-white
-    color: #fff
-
-  .section-head
-    margin: 0 0 10px 0
-    width: 100%
-    font-size: 300%
-    text-align: center
-    font-weight: lighter
-
-  header
-    padding: 10px $pad*3
-    display: flex
-    flex-wrap: wrap
-    align-items: center
-    justify-content: space-around
-
-    h2
-      font-weight: 300
-
-    p
-      margin: 0
-
-    ul
-      list-style-type: none
-
-      li
-        display: inline-block
-        margin-left: 1em
-
-        .link-box
-          text-align: center
-          font-size: 36px
-
-          .link-label
-            font-size: 16px
-
+// start of main
+main
+  // jumbotronish
   .my-title
     background-color: $jumbo-bg
     padding: $pad*3
     text-align: center
-
-    h1
-      margin: 10px
-      font-family: "Cormorant Garamond", "Times New Roman", serif
-      font-size: 425%
-      font-weight: lighter
-
+    background-image: url("../assets/images/dots_bg.svg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
     img
       border-radius: 50%
       max-width: 256px
@@ -82,16 +77,19 @@ body
       transition: 0.2s
     img:hover
       filter: contrast(110%) saturate(80%) drop-shadow(3px 3px 3px rgba(0,0,0,0.3))
-
+    h1
+      margin: 10px
+      font-family: "Cormorant Garamond", "Times New Roman", serif
+      font-size: 430%
+      font-weight: lighter
     p
       margin: 0 auto
       max-width: 42%
-      font-size: 115%
+      font-size: 120%
       border-top: 1px solid rgba(0,0,0,0.1)
       line-height: 1.5
       margin-bottom: 10px
-      color: #424b54
-
+      // color: #424b54
     a
       padding: 10px $pad*2
       background-color: $link-color
@@ -101,7 +99,6 @@ body
       font-size: 110%
     a:hover
       filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3))
-
     // Look into media queries more...
     @media screen and (max-width: 768px)
       p
@@ -110,17 +107,16 @@ body
       a
         font-size: 95%
 
+  // projects
   .project-container
     padding: $pad
     background-color: #fff
-
     ul
       display: flex
       flex-wrap: wrap
       align-items: center
       justify-content: center
       list-style-type: none
-
       .card
         position: relative
         box-sizing: border-box
@@ -131,12 +127,10 @@ body
         border-radius: 15px
         border: 1px solid rgba(0,0,0,0.1)
         overflow: hidden
-
         background-image: url("https://www.fridakahlo.org/images/paintings/self-portrait-with-necklace-of-thorns.jpg")
         background-size: contain
         background-repeat: no-repeat
         background-position: center
-
         .card-info
           position: absolute
           bottom: 0
@@ -150,15 +144,12 @@ body
           border-bottom-left-radius: inherit
           border-bottom-right-radius: inherit
           transition: .5s
-
           .proj-title
             font-size: 1.35em
             margin: 0
             font-weight: lighter
-
           .proj-desc
             text-align: left
-
           a
             margin: 5px 10px
             font-size: 45px
@@ -166,64 +157,54 @@ body
             filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5))
           a:hover
             color: $res-bg
-
         .card-info:hover
           height: 100%
           border-top-left-radius: inherit
           border-top-right-radius: inherit
 
-    .proj-1
-      background-image: url("../assets/images/MilesABC.png")
-    .proj-2
-      background-image: url("../assets/images/pixel_art.png")
-    .proj-3
-      background-image: url("../assets/images/color_picker.png")
-    .proj-4
-      background-image: url("../assets/images/oprah.jpg")
-      background-size: cover
-    .proj-5
-      background-size: cover
-
+  // skills and experience section
   .resume-container
-    padding: $pad
     background-color: $res-bg
-    display: grid
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr))
-    grid-gap: 1em
+    padding: $pad
+    .wrapper
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr))
+      grid-gap: 1em
+      h2
+        padding: 0 0 5px 5px
+        width: 25%
+        border-left: 2px solid $link-color
+        border-bottom: 2px solid $link-color
+      h3
+        display: inline-block
+        padding: 10px 10px 0 2px
+        background-color: $link-color
+        font-weight: lighter
+      h3
+        margin-top: 1em
+      ul
+        margin: 0
+        list-style-type: none
+        padding-left: 1em
+      .experience
+        justify-self: start
+        p
+          line-height: 1.5
 
-    h2, h3
-      display: inline-block
-      margin: 0
-      padding: 10px 10px 0 2px
-      background: $link-color
-      font-weight: lighter
-
-    ul
-      margin: 0
-      list-style-type: none
-      padding-left: 1em
-
-    .experience
-      justify-self: start
-
-  footer
-    padding: $pad $pad*4
+footer
+    padding: $pad
     display: grid
     grid-template-columns: 1fr 1fr
-
     .ul
       text-decoration: underline
-
     p
       margin: 0
     p:last-child
       text-align: right
-
-  @media screen and (max-width: 768px)
-    footer
-      grid-template-columns: 1fr
-      padding: $pad
-
-      p:last-child
-        text-align: center
-        margin-top: $pad/2
+@media screen and (max-width: 768px)
+  footer
+    grid-template-columns: 1fr
+    padding: $pad
+    p:last-child
+      text-align: center
+      margin-top: $pad/2

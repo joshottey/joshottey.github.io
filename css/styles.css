@@ -4,82 +4,91 @@ body {
   font-family: "Lato", Helvetica, Arial, san-serif;
   font-size: 16px;
   background-color: #333A41;
-  color: #111;
+  color: #333;
 }
-body h1, body h2, body h3 {
+
+h1, h2, h3 {
   margin: 0;
 }
-body a {
+
+a {
   color: #C97D60;
   text-decoration: none;
 }
-body .txt-white {
+
+.txt-white {
   color: #fff;
 }
-body .section-head {
+
+.section-head {
   margin: 0 0 10px 0;
   width: 100%;
   font-size: 300%;
   text-align: center;
   font-weight: lighter;
 }
-body header {
+
+header {
   padding: 10px 60px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
 }
-body header h2 {
+header h2 {
   font-weight: 300;
 }
-body header p {
+header p {
   margin: 0;
 }
-body header ul {
+header ul {
   list-style-type: none;
 }
-body header ul li {
+header ul li {
   display: inline-block;
   margin-left: 1em;
 }
-body header ul li .link-box {
+header ul li .link-box {
   text-align: center;
   font-size: 36px;
 }
-body header ul li .link-box .link-label {
+header ul li .link-box .link-label {
   font-size: 16px;
 }
-body .my-title {
-  background-color: #93B48B;
+
+main .my-title {
+  background-color: #CFFFB3;
   padding: 60px;
   text-align: center;
+  background-image: url("../assets/images/dots_bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-body .my-title h1 {
-  margin: 10px;
-  font-family: "Cormorant Garamond", "Times New Roman", serif;
-  font-size: 425%;
-  font-weight: lighter;
-}
-body .my-title img {
+main .my-title img {
   border-radius: 50%;
   max-width: 256px;
   filter: contrast(110%) saturate(80%) drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.3));
   transition: 0.2s;
 }
-body .my-title img:hover {
+main .my-title img:hover {
   filter: contrast(110%) saturate(80%) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
 }
-body .my-title p {
+main .my-title h1 {
+  margin: 10px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 430%;
+  font-weight: lighter;
+}
+main .my-title p {
   margin: 0 auto;
   max-width: 42%;
-  font-size: 115%;
+  font-size: 120%;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   line-height: 1.5;
   margin-bottom: 10px;
-  color: #424b54;
 }
-body .my-title a {
+main .my-title a {
   padding: 10px 40px;
   background-color: #C97D60;
   border-radius: 5px;
@@ -87,30 +96,30 @@ body .my-title a {
   transition: 0.2s;
   font-size: 110%;
 }
-body .my-title a:hover {
+main .my-title a:hover {
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 @media screen and (max-width: 768px) {
-  body .my-title p {
+  main .my-title p {
     max-width: 100%;
     font-size: 95%;
   }
-  body .my-title a {
+  main .my-title a {
     font-size: 95%;
   }
 }
-body .project-container {
+main .project-container {
   padding: 20px;
   background-color: #fff;
 }
-body .project-container ul {
+main .project-container ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   list-style-type: none;
 }
-body .project-container ul .card {
+main .project-container ul .card {
   position: relative;
   box-sizing: border-box;
   margin: 0.5em;
@@ -125,7 +134,7 @@ body .project-container ul .card {
   background-repeat: no-repeat;
   background-position: center;
 }
-body .project-container ul .card .card-info {
+main .project-container ul .card .card-info {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -139,86 +148,85 @@ body .project-container ul .card .card-info {
   border-bottom-right-radius: inherit;
   transition: 0.5s;
 }
-body .project-container ul .card .card-info .proj-title {
+main .project-container ul .card .card-info .proj-title {
   font-size: 1.35em;
   margin: 0;
   font-weight: lighter;
 }
-body .project-container ul .card .card-info .proj-desc {
+main .project-container ul .card .card-info .proj-desc {
   text-align: left;
 }
-body .project-container ul .card .card-info a {
+main .project-container ul .card .card-info a {
   margin: 5px 10px;
   font-size: 45px;
   transition: 0.5s ease;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
 }
-body .project-container ul .card .card-info a:hover {
-  color: #E6AF2E;
+main .project-container ul .card .card-info a:hover {
+  color: #36829F;
 }
-body .project-container ul .card .card-info:hover {
+main .project-container ul .card .card-info:hover {
   height: 100%;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
 }
-body .project-container .proj-1 {
-  background-image: url("../assets/images/MilesABC.png");
-}
-body .project-container .proj-2 {
-  background-image: url("../assets/images/pixel_art.png");
-}
-body .project-container .proj-3 {
-  background-image: url("../assets/images/color_picker.png");
-}
-body .project-container .proj-4 {
-  background-image: url("../assets/images/oprah.jpg");
-  background-size: cover;
-}
-body .project-container .proj-5 {
-  background-size: cover;
-}
-body .resume-container {
+main .resume-container {
+  background-color: #36829F;
   padding: 20px;
-  background-color: #E6AF2E;
+}
+main .resume-container .wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-gap: 1em;
 }
-body .resume-container h2, body .resume-container h3 {
+main .resume-container .wrapper h2 {
+  padding: 0 0 5px 5px;
+  width: 25%;
+  border-left: 2px solid #C97D60;
+  border-bottom: 2px solid #C97D60;
+}
+main .resume-container .wrapper h3 {
   display: inline-block;
-  margin: 0;
   padding: 10px 10px 0 2px;
-  background: #C97D60;
+  background-color: #C97D60;
   font-weight: lighter;
 }
-body .resume-container ul {
+main .resume-container .wrapper h3 {
+  margin-top: 1em;
+}
+main .resume-container .wrapper ul {
   margin: 0;
   list-style-type: none;
   padding-left: 1em;
 }
-body .resume-container .experience {
+main .resume-container .wrapper .experience {
   justify-self: start;
 }
-body footer {
-  padding: 20px 80px;
+main .resume-container .wrapper .experience p {
+  line-height: 1.5;
+}
+
+footer {
+  padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-body footer .ul {
+footer .ul {
   text-decoration: underline;
 }
-body footer p {
+footer p {
   margin: 0;
 }
-body footer p:last-child {
+footer p:last-child {
   text-align: right;
 }
+
 @media screen and (max-width: 768px) {
-  body footer {
+  footer {
     grid-template-columns: 1fr;
     padding: 20px;
   }
-  body footer p:last-child {
+  footer p:last-child {
     text-align: center;
     margin-top: 10px;
   }
