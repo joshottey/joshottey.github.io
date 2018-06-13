@@ -35,8 +35,16 @@ var app = new Vue({
         visible: false
       },
       {
+        title: "Tea Wisdom",
+        desc: "A web app that displays inspirational quotes collected from teabags. I intend for this to become an open source project where anyone can submit a quote.",
+        imgURL: "",
+        projURL: "https://joshottey.github.io/TeaWisdom",
+        gitURL: "https://github.com/joshottey/TeaWisdom",
+        visible: false
+      },
+      {
         title: "Drizzle",
-        desc: "An in-browser weather app using geolocation and the Weather Underground API. Coming soon!",
+        desc: "A weather app using geolocation and the Weather Underground API. Coming soon!",
         imgURL: "",
         projURL: "https://joshottey.github.io/Drizzle",
         gitURL: "https://github.com/joshottey/Drizzle",
