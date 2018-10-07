@@ -105,7 +105,14 @@ main .my-title p {
   line-height: 1.5;
   margin-bottom: 10px;
 }
+main .my-title #callToContact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 main .my-title a {
+  margin: 0 0.25em;
   padding: 10px 40px;
   background-color: #C97D60;
   border-radius: 5px;
@@ -249,4 +256,4 @@ footer p:last-child {
   }
 }
 
-/*# sourceMappingURL=css/styles.css.map */
+/*# sourceMappingURL=styles.css.map */
